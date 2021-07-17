@@ -190,7 +190,9 @@ create_wordcloud(products)
 ```
 
 
+    
 ![png](section-4-wrangling-and-analysis_files/section-4-wrangling-and-analysis_24_0.png)
+    
 
 
 ### What type of industries do the top 20 company belong from?
@@ -250,7 +252,9 @@ create_wordcloud(industries, ['industry']) # adding "industry" to the stopword l
 ```
 
 
+    
 ![png](section-4-wrangling-and-analysis_files/section-4-wrangling-and-analysis_32_0.png)
+    
 
 
 ### What the assets of the top 20 companies look like?
@@ -415,7 +419,9 @@ plt.show()
 ```
 
 
+    
 ![png](section-4-wrangling-and-analysis_files/section-4-wrangling-and-analysis_49_0.png)
+    
 
 
 Now let's create a new dataframe containing data related to `products`, `industry` and `assets` as follows,
