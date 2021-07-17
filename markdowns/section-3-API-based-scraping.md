@@ -62,6 +62,31 @@ Let's begin by installing some of libraries we will use for this excercise as fo
 !pip install wordcloud
 ```
 
+    Requirement already satisfied: wptools in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (0.4.17)
+    Requirement already satisfied: certifi in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wptools) (2020.6.20)
+    Requirement already satisfied: pycurl in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wptools) (7.43.0.5)
+    Requirement already satisfied: html2text in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wptools) (2020.1.16)
+    Requirement already satisfied: lxml in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wptools) (4.5.0)
+    Requirement already satisfied: wikipedia in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (1.4.0)
+    Requirement already satisfied: beautifulsoup4 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wikipedia) (4.8.2)
+    Requirement already satisfied: requests<3.0.0,>=2.0.0 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wikipedia) (2.24.0)
+    Requirement already satisfied: idna<3,>=2.5 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from requests<3.0.0,>=2.0.0->wikipedia) (2.10)
+    Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from requests<3.0.0,>=2.0.0->wikipedia) (1.25.11)
+    Requirement already satisfied: certifi>=2017.4.17 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from requests<3.0.0,>=2.0.0->wikipedia) (2020.6.20)
+    Requirement already satisfied: chardet<4,>=3.0.2 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from requests<3.0.0,>=2.0.0->wikipedia) (3.0.4)
+    Requirement already satisfied: soupsieve>=1.2 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from beautifulsoup4->wikipedia) (1.9.5)
+    Requirement already satisfied: wordcloud in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (1.6.0)
+    Requirement already satisfied: matplotlib in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wordcloud) (3.1.3)
+    Requirement already satisfied: pillow in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wordcloud) (8.3.1)
+    Requirement already satisfied: numpy>=1.6.1 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from wordcloud) (1.18.1)
+    Requirement already satisfied: python-dateutil>=2.1 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from matplotlib->wordcloud) (2.8.1)
+    Requirement already satisfied: kiwisolver>=1.0.1 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from matplotlib->wordcloud) (1.1.0)
+    Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from matplotlib->wordcloud) (2.4.6)
+    Requirement already satisfied: cycler>=0.10 in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from matplotlib->wordcloud) (0.10.0)
+    Requirement already satisfied: six in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from cycler>=0.10->matplotlib->wordcloud) (1.14.0)
+    Requirement already satisfied: setuptools in c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages (from kiwisolver>=1.0.1->matplotlib->wordcloud) (57.2.0)
+    
+
 Importing the same,
 
 
@@ -90,7 +115,7 @@ urllib.request.urlretrieve(url, 'fortune_500_companies.csv')
 
 
 
-    ('fortune_500_companies.csv', <http.client.HTTPMessage at 0x25ede05b320>)
+    ('fortune_500_companies.csv', <http.client.HTTPMessage at 0x1e497b5dd48>)
 
 
 
@@ -100,6 +125,69 @@ fname = 'fortune_500_companies.csv' # scrapped data from previous section
 df = pd.read_csv(fname)             # reading the csv file as a pandas df
 df.head()                           # displaying the first 5 rows
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rank</th>
+      <th>company_name</th>
+      <th>company_website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Walmart</td>
+      <td>http://www.stock.walmart.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Exxon Mobil</td>
+      <td>http://www.exxonmobil.com</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Berkshire Hathaway</td>
+      <td>http://www.berkshirehathaway.com</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Apple</td>
+      <td>http://www.apple.com</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>UnitedHealth Group</td>
+      <td>http://www.unitedhealthgroup.com</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 |    |   rank | company_name       | company_website                  |
 |---:|-------:|:-------------------|:---------------------------------|
@@ -171,83 +259,83 @@ for idx, company in enumerate(wiki_search):
 ```
 
     1. Walmart :
-    Walmart, History of Walmart, Criticism of Walmart, Walmarting, People of Walmart, Walmart (disambiguation), Walmart Canada, List of Walmart brands, Walmart Watch, 2019 El Paso shooting
+    Walmart, Criticism of Walmart, History of Walmart, Walmart (disambiguation), List of Walmart brands, Asda, Walmart Canada, Walmarting, People of Walmart, List of assets owned by Walmart
     
     
     2. Exxon Mobil :
-    ExxonMobil, Exxon, Mobil, Esso, ExxonMobil climate change controversy, Exxon Valdez oil spill, ExxonMobil Building, ExxonMobil Electrofrac, List of public corporations by market capitalization, Exxon Valdez
+    ExxonMobil, Exxon, ExxonMobil climate change controversy, Mobil, Exxon Valdez oil spill, ExxonMobil Australia, ExxonMobil Building, Accusations of ExxonMobil human rights violations in Indonesia, Rex Tillerson, Mobil 1
     
     
     3. Berkshire Hathaway :
-    Berkshire Hathaway, Berkshire Hathaway Energy, List of assets owned by Berkshire Hathaway, Berkshire Hathaway Assurance, Berkshire Hathaway GUARD Insurance Companies, Warren Buffett, List of Berkshire Hathaway publications, The World's Billionaires, List of public corporations by market capitalization, David L. Sokol
+    Berkshire Hathaway, List of assets owned by Berkshire Hathaway, Berkshire Hathaway Energy, Warren Buffett, List of Berkshire Hathaway publications, Berkshire Hathaway Assurance, Berkshire Hathaway GUARD Insurance Companies, The World's Billionaires, David L. Sokol, Brooks Sports
     
     
     4. Apple :
-    Apple, Apple Inc., IPhone, Apple (disambiguation), IPad, Apple Silicon, IOS, MacOS, Macintosh, Fiona Apple
+    Apple, Apple Inc., Apple (disambiguation), IPhone, MacOS, IOS, A for Apple, Apple silicon, Apples to Apples, Apple TV
     
     
     5. UnitedHealth Group :
-    UnitedHealth Group, Optum, Pharmacy benefit management, William W. McGuire, Stephen J. Hemsley, Golden Rule Insurance Company, Catamaran Corporation, PacifiCare Health Systems, Gail Koziara Boudreaux, Amelia Warren Tyagi
+    UnitedHealth Group, Optum, Pharmacy benefit management, Andrew Witty, Stephen J. Hemsley, Dow Jones Industrial Average, List of largest companies by revenue, William W. McGuire, PacifiCare Health Systems, Health Net
     
     
     6. McKesson :
-    McKesson Corporation, DeRay Mckesson, McKesson Europe, Malcolm McKesson, Rexall (Canada), McKesson Plaza, McKesson (disambiguation), Johnetta Elzie, McKesson & Robbins scandal (1938), John Hammergren
+    McKesson Corporation, McKesson Europe, DeRay Mckesson, McKesson & Robbins scandal (1938), McKesson (disambiguation), Rexall (Canada), McKesson Plaza, Phillip Musica, LloydsPharmacy, Precious McKesson
     
     
     7. CVS Health :
-    CVS Health, CVS Pharmacy, CVS Health Charity Classic, CVS Caremark, Pharmacy benefit management, Larry Merlo, CVS, Encompass Health, Longs Drugs, MinuteClinic
+    CVS Health, CVS Pharmacy, CVS Caremark, Pharmacy benefit management, CVS, CVS Health Charity Classic, Health Net, Larry Merlo, UnitedHealth Group, America First Policies
     
     
     8. Amazon.com :
-    Amazon (company), History of Amazon, List of Amazon products and services, Prime Video, List of Amazon original programming, Amazon Web Services, Dot-com bubble, List of mergers and acquisitions by Amazon, Amazon S3, .amazon
+    Amazon (company), Amazon Prime Video, History of Amazon, Criticism of Amazon, List of Amazon products and services, Amazon Appstore, Amazon S3, List of mergers and acquisitions by Amazon, Amazon Prime, Amazon.ae
     
     
     9. AT&T :
-    AT&T, AT&T Mobility, AT&T Corporation, AT&T TV, AT&T Stadium, T & T Supermarket, T, AT&T Communications, AT&T U-verse, AT&T SportsNet
+    AT&T, T, AT&T Mobility, AT&T Corporation, AT&T U-verse, T-Pain, T.A.T.u., Ford Model T, T-Series (company), Northrop T-38 Talon
     
     
     10. General Motors :
-    General Motors, History of General Motors, General Motors EV1, General Motors Vortec engine, Vauxhall Motors, GMC (automobile), General Motors 122 engine, General Motors 60° V6 engine, General Motors Chapter 11 reorganization, List of General Motors factories
+    General Motors, General Motors India, History of General Motors, General Motors Vortec engine, List of General Motors factories, General Motors Chapter 11 reorganization, Vauxhall Motors, GMC (automobile), General Motors Canada, General Motors EV1
     
     
     11. Ford Motor :
-    Ford Motor Company, History of Ford Motor Company, Lincoln Motor Company, Ford Trimotor, Henry Ford, Henry Ford II, Ford Foundation, Ford F-Series, Edsel Ford, Ford Germany
+    Ford Motor Company, Ford Trimotor, Lincoln Motor Company, Henry Ford, History of Ford Motor Company, Ford of Britain, Ford Germany, Henry Ford II, List of leaders of Ford Motor Company, Edsel Ford
     
     
     12. AmerisourceBergen :
-    AmerisourceBergen, List of largest companies by revenue, Cardinal Health, Steven H. Collis, Ornella Barra, Good Neighbor Pharmacy, Family Pharmacy, PharMerica, Remdesivir, Michael DiCandilo
+    AmerisourceBergen, List of largest companies by revenue, Cardinal Health, Ornella Barra, Steven H. Collis, PharMerica, List of S&P 500 companies, The Vanguard Group, Remdesivir, MWI Veterinary Supply
     
     
     13. Chevron :
-    Chevron Corporation, Chevron, Chevron (insignia), Philip Chevron, Chevron Cars Ltd, Chevron Cars, Chevron bead, Wound Chevron, Chevron (anatomy), Chevron Phillips Chemical
+    Chevron Corporation, Chevron, Chevron (insignia), Chevron Cars, Chevron Renaissance, Chevron Cars Ltd, Chevron House, Philip Chevron, Wound Chevron, Steven Donziger
     
     
     14. Cardinal Health :
-    Cardinal Health, Cardinal, Catalent, Cardinal (TV series), Robert D. Walter, Dublin, Ohio, Northern cardinal, List of largest companies by revenue, Cordis (medical), George S. Barrett
+    Cardinal Health, Cardinal, Catalent, Cordis (medical), Pyxis Corporation, Robert D. Walter, Northern cardinal, The Crime of the Century (2021 film), List of largest companies by revenue, S&P 500 Dividend Aristocrats
     
     
     15. Costco :
-    Costco, W. Craig Jelinek, American Express, Price Club, James Sinegal, Rotisserie chicken, Jeffrey Brotman, Warehouse club, Richard Chang (Costco), Costco bear
+    Costco, American Express, Rotisserie chicken, Costco bear, W. Craig Jelinek, Price Club, Richard Chang (Costco), James Sinegal, Warehouse club, Jeffrey Brotman
     
     
     16. Verizon :
-    Verizon Communications, Verizon Wireless, Verizon Media, Verizon Fios, Verizon Building, Verizon Delaware, Verizon Business, 4G, Verizon Hub, Verizon Hum
+    Verizon Communications, Verizon Media, Verizon Fios, Verizon (mobile network), Verizon Business, Yahoo!, Verizon Building, Verizon Center, Verizon North, Capital One Arena
     
     
     17. Kroger :
-    Kroger, Murder Kroger, Kroger (disambiguation), Chad Kroeger, Bernard Kroger, Michael Kroger, Stanley Kamel, Tonio Kröger, Rodney McMullen, List of Monk characters
+    Kroger, Murder Kroger, Bernard Kroger, Kroger (disambiguation), Michael Kroger, Uwe Kröger, Kroeger, Chad Kroeger, Kroger Field, Stanley Kamel
     
     
     18. General Electric :
-    General Electric, General Electric GEnx, General Electric CF6, General Electric F110, General Electric F404, General Electric GE9X, General Electric GE90, General Electric J85, General Electric F414, General Electric Company
+    General Electric, General Electric Company, General Electric GEnx, General Electric F404, General Electric CF6, General Electric F110, General Electric J85, General Electric Theater, General Electric T700, General Electric LM2500
     
     
     19. Walgreens Boots Alliance :
-    Walgreens Boots Alliance, Alliance Boots, Walgreens, Boots (company), Alliance Healthcare, Stefano Pessina, Boots Opticians, Rite Aid, Ken Murphy (businessman), Gregory Wasson
+    Walgreens Boots Alliance, Alliance Boots, Walgreens, Boots (company), Alliance Healthcare, Rosalind Brewer, Stefano Pessina, Boots Opticians, Deerfield, Illinois, Duane Reade
     
     
     20. JPMorgan Chase :
-    JPMorgan Chase, Chase Bank, 2012 JPMorgan Chase trading loss, JPMorgan Chase Tower (Houston), 270 Park Avenue, Chase Paymentech, 2014 JPMorgan Chase data breach, Bear Stearns, Jamie Dimon, JPMorgan Chase Building (Houston)
+    JPMorgan Chase, Chase Bank, JPMorgan Chase Tower (Houston), 2012 JPMorgan Chase trading loss, 270 Park Avenue, 2014 JPMorgan Chase data breach, J.P. Morgan & Co., List of largest banks, Jamie Dimon, JPMorgan Chase Building (Houston)
     
     
     
@@ -289,26 +377,26 @@ page.get_parse()    # parses the wikipedia article
 ```
 
     en.wikipedia.org (parse) Walmart
-    en.wikipedia.org (imageinfo) File:Walmart store exterior 5266815680.jpg
+    en.wikipedia.org (imageinfo) File:Walmart Home Office.jpg
     Walmart (en) data
     {
-      image: <list(1)> {'kind': 'parse-image', 'file': 'File:Walmart s...
+      image: <list(1)> {'kind': 'parse-image', 'file': 'File:Walmart H...
       infobox: <dict(30)> name, logo, logo_caption, image, image_size,...
       iwlinks: <list(2)> https://commons.wikimedia.org/wiki/Category:W...
       pageid: 33589
-      parsetree: <str(347698)> <root><template><title>about</title><pa...
+      parsetree: <str(351698)> <root><template><title>short descriptio...
       requests: <list(2)> parse, imageinfo
       title: Walmart
       wikibase: Q483551
       wikidata_url: https://www.wikidata.org/wiki/Q483551
-      wikitext: <str(277438)> {{about|the retail chain|other uses}}{{p...
+      wikitext: <str(283370)> {{short description|American multination...
     }
     
 
 
 
 
-    <wptools.page.WPToolsPage at 0x25ede0ed588>
+    <wptools.page.WPToolsPage at 0x1e497c01408>
 
 
 
@@ -339,30 +427,30 @@ page.data['infobox']
     {'name': 'Walmart Inc.',
      'logo': 'Walmart logo.svg',
      'logo_caption': "Walmart's current logo since 2008",
-     'image': 'Walmart store exterior 5266815680.jpg',
+     'image': 'Walmart Home Office.jpg',
      'image_size': '270px',
-     'image_caption': 'Exterior of a Walmart store',
-     'former_name': "{{Unbulleted list|Walton's (1950–1969)|Wal-Mart, Inc. (1969–1970)|Wal-Mart Stores, Inc. (1970–2018)}}",
+     'image_caption': 'Walmart Home Office (headquarters)',
+     'former_name': '{{Unbulleted list|Wal-Mart Discount City (1962–1969)|Wal-Mart, Inc. (1969–1970)|Wal-Mart Stores, Inc. (1970–current)}}',
      'type': '[[Public company|Public]]',
      'ISIN': 'US9311421039',
      'industry': '[[Retail]]',
      'traded_as': '{{Unbulleted list|NYSE|WMT|[[DJIA]] component|[[S&P 100]] component|[[S&P 500]] component}} {{NYSE|WMT}}',
-     'foundation': '{{Start date and age|1962|7|2}} (in [[Rogers, Arkansas]])',
+     'foundation': '{{plainlist|\n*|Start date and age|1962|7|2| in [[Rogers, Arkansas]]|ref|{{cite web|title=Our History|url=https://corporate.walmart.com/our-story/our-history|website=Corporate.Walmart.com|access-date=July 30, 2020}}|</ref>|\n* |Start date and age|1969|10|31| in [[Wilmington, Delaware]] (incorporation)}} {{Start date and age|1962|7|2}} in [[Rogers, Arkansas]] * {{Start date and age|1969|10|31}} in [[Wilmington, Delaware]] (incorporation)',
      'founder': '[[Sam Walton]]',
      'location_city': '[[Bentonville, Arkansas]]',
      'location_country': 'U.S.',
-     'locations': '{{decrease}} 11,484 stores worldwide (April 30, 2020)',
+     'locations': '{{decrease}} 10,526 stores worldwide (April 30, 2021)',
      'area_served': 'Worldwide',
      'key_people': '{{plainlist|\n* [[Greg Penner]] ([[Chairman]])\n* [[Doug McMillon]] ([[President (corporate title)|President]], [[CEO]])}}',
-     'products': '{{hlist|Electronics|Movies and music|Home and furniture|Home improvement|Clothing|Footwear|Jewelry|Toys|Health and beauty|Pet supplies|Sporting goods and fitness|Auto|Photo finishing|Craft supplies|Party supplies|Grocery}}',
+     'products': '{{hlist|Electronics|Movies, music, and games|Home and furniture|Home improvement|Clothing|Footwear|Jewelry|Toys|Garden supplies|Health and beauty|Pet supplies|Sporting goods and fitness|Auto|Photo finishing|Craft and party supplies|Grocery}}',
      'services': '{{hlist|[[Ria Money Transfer|Walmart-2-Walmart]]|Walmart MoneyCard|Pickup Today|Walmart.com|Financial Services| Walmart Pay}}',
-     'revenue': '{{increase}} {{US$|523.964 billion|link|=|yes}} {{small|([[Fiscal Year|FY]] 2020)}}',
-     'operating_income': '{{decrease}} {{US$|20.568 billion}} {{small|(FY 2020)}}',
-     'net_income': '{{increase}} {{US$|14.881 billion}} {{small|(FY 2020)}}',
-     'assets': '{{increase}} {{US$|236.495 billion}} {{small|(FY 2020)}}',
-     'equity': '{{increase}} {{US$|74.669 billion}} {{small|(FY 2020)}}',
+     'revenue': '{{increase}} {{US$|559.2 billion|link|=|yes}} (2021)',
+     'operating_income': '{{increase}} {{US$|22.55 billion}} (2021)',
+     'net_income': '{{increase}} {{US$|13.70 billion}} (2021)',
+     'assets': '{{increase}} {{US$|252.5 billion}} (2021)',
+     'equity': '{{increase}} {{US$|87.53 billion}} (2021)',
      'owner': '[[Walton family]] (50.85%)',
-     'num_employees': '{{plainlist|\n* 2.2|nbsp|million, Worldwide (2018)|ref| name="xbrlus_1" |\n* 1.5|nbsp|million, U.S. (2017)|ref| name="Walmart"|{{cite web |url = http://corporate.walmart.com/our-story/locations/united-states |title = Walmart Locations Around the World – United States |publisher = |url-status=live |archiveurl = https://web.archive.org/web/20150926012456/http://corporate.walmart.com/our-story/locations/united-states |archivedate = September 26, 2015 |df = mdy-all }}|</ref>|\n* 700,000, International}} {{nbsp}} million, Worldwide (2018) * 1.5 {{nbsp}} million, U.S. (2017) * 700,000, International',
+     'num_employees': '{{plainlist|\n* 2.2&nbsp;million, Worldwide (2020)|ref| name="xbrlus_1"|{{cite web|url= https://s2.q4cdn.com/056532643/files/doc_financials/2020/q4/Earnings-Release-1.31.2020-Final.pdf}}|</ref>|\n* 1.5&nbsp;million, U.S. (2017)|ref| name="Walmart"|{{cite web |url = http://corporate.walmart.com/our-story/locations/united-states |title = Walmart Locations Around the World – United States |url-status=live |archive-url = https://web.archive.org/web/20150926012456/http://corporate.walmart.com/our-story/locations/united-states |archive-date = September 26, 2015}}|</ref>|\n* 700,000, International}} * 1.5&nbsp;million, U.S. (2017) * 700,000, International',
      'divisions': "{{Unbulleted list|Walmart U.S.|Walmart International|[[Sam's Club]]|Global eCommerce}}",
      'subsid': '[[List of assets owned by Walmart|List of subsidiaries]]',
      'homepage': '{{URL|walmart.com}}'}
@@ -404,48 +492,47 @@ for company in companies:
 ```
 
     en.wikipedia.org (parse) Walmart
-    en.wikipedia.org (imageinfo) File:Walmart store exterior 5266815680.jpg
+    en.wikipedia.org (imageinfo) File:Walmart Home Office.jpg
     Walmart (en) data
     {
-      image: <list(1)> {'kind': 'parse-image', 'file': 'File:Walmart s...
+      image: <list(1)> {'kind': 'parse-image', 'file': 'File:Walmart H...
       infobox: <dict(30)> name, logo, logo_caption, image, image_size,...
       iwlinks: <list(2)> https://commons.wikimedia.org/wiki/Category:W...
       pageid: 33589
-      parsetree: <str(347698)> <root><template><title>about</title><pa...
+      parsetree: <str(351698)> <root><template><title>short descriptio...
       requests: <list(2)> parse, imageinfo
       title: Walmart
       wikibase: Q483551
       wikidata_url: https://www.wikidata.org/wiki/Q483551
-      wikitext: <str(277438)> {{about|the retail chain|other uses}}{{p...
+      wikitext: <str(283370)> {{short description|American multination...
     }
     en.wikipedia.org (parse) ExxonMobil
-    en.wikipedia.org (imageinfo) File:Exxonmobil-headquarters-1.jpg
     ExxonMobil (en) data
     {
-      image: <list(1)> {'kind': 'parse-image', 'file': 'File:Exxonmobi...
-      infobox: <dict(30)> name, logo, image, image_caption, type, trad...
-      iwlinks: <list(4)> https://commons.wikimedia.org/wiki/Category:E...
+      infobox: <dict(24)> name, logo, logo_size, type, traded_as, ISIN...
+      iwlinks: <list(5)> https://commons.wikimedia.org/wiki/Category:E...
       pageid: 18848197
-      parsetree: <str(192545)> <root><template><title>short descriptio...
-      requests: <list(2)> parse, imageinfo
+      parsetree: <str(195244)> <root><template><title>Short descriptio...
+      requests: <list(1)> parse
       title: ExxonMobil
       wikibase: Q156238
       wikidata_url: https://www.wikidata.org/wiki/Q156238
-      wikitext: <str(157036)> {{short description|American multination...
+      wikitext: <str(160770)> {{Short description|American multination...
     }
     en.wikipedia.org (parse) Berkshire Hathaway
+    en.wikipedia.org (imageinfo) File:OmahaKiewitPlaza.jpg
     Berkshire Hathaway (en) data
     {
-      image: <list(0)> 
-      infobox: <dict(24)> name, former_name, logo, image, image_captio...
+      image: <list(1)> {'kind': 'parse-image', 'file': 'File:OmahaKiew...
+      infobox: <dict(26)> name, former_name, logo, logo_size, image, i...
       iwlinks: <list(1)> https://commons.wikimedia.org/wiki/Category:B...
       pageid: 314333
-      parsetree: <str(105467)> <root><template><title>short descriptio...
-      requests: <list(1)> parse
+      parsetree: <str(110613)> <root><template><title>short descriptio...
+      requests: <list(2)> parse, imageinfo
       title: Berkshire Hathaway
       wikibase: Q217583
       wikidata_url: https://www.wikidata.org/wiki/Q217583
-      wikitext: <str(89908)> {{short description|American multinationa...
+      wikitext: <str(94041)> {{short description|American multinationa...
     }
     en.wikipedia.org (parse) Apple Inc.
     en.wikipedia.org (imageinfo) File:Apple park cupertino 2019.jpg
@@ -453,235 +540,162 @@ for company in companies:
     {
       image: <list(1)> {'kind': 'parse-image', 'file': 'File:Apple par...
       infobox: <dict(35)> name, logo, logo_size, image, image_size, im...
-      iwlinks: <list(8)> https://commons.wikimedia.org/wiki/Special:Se...
+      iwlinks: <list(9)> https://commons.wikimedia.org/wiki/Apple_Inc....
       pageid: 856
-      parsetree: <str(419620)> <root><template><title>Redirect</title>...
+      parsetree: <str(437121)> <root><template><title>Redirect</title>...
       requests: <list(2)> parse, imageinfo
       title: Apple Inc.
       wikibase: Q312
       wikidata_url: https://www.wikidata.org/wiki/Q312
-      wikitext: <str(335917)> {{Redirect|Apple (company)|other compani...
+      wikitext: <str(351835)> {{Redirect|Apple (company)|other compani...
     }
     en.wikipedia.org (parse) UnitedHealth Group
     UnitedHealth Group (en) data
     {
-      infobox: <dict(17)> name, logo, type, traded_as, founder, key_pe...
+      infobox: <dict(19)> name, logo, type, traded_as, founder, key_pe...
       pageid: 1845551
-      parsetree: <str(87066)> <root><template><title>Redirect</title><...
+      parsetree: <str(89052)> <root><template><title>Short description...
       requests: <list(1)> parse
       title: UnitedHealth Group
       wikibase: Q2103926
       wikidata_url: https://www.wikidata.org/wiki/Q2103926
-      wikitext: <str(74588)> {{Redirect|UnitedHealthcare|the cycling t...
+      wikitext: <str(75354)> {{Short description|American health care ...
     }
     en.wikipedia.org (parse) McKesson Corporation
     McKesson Corporation (en) data
     {
       infobox: <dict(19)> name, logo, type, traded_as, founder, locati...
+      iwlinks: <list(1)> https://foundation.wikimedia.org/wiki/Terms_of_Use
       pageid: 1041603
-      parsetree: <str(40259)> <root><template><title>Redirect</title><...
+      parsetree: <str(44511)> <root><template><title>Redirect</title><...
       requests: <list(1)> parse
       title: McKesson Corporation
       wikibase: Q570473
       wikidata_url: https://www.wikidata.org/wiki/Q570473
-      wikitext: <str(32180)> {{Redirect|McKesson}}{{short description|...
+      wikitext: <str(35385)> {{Redirect|McKesson}}{{short description|...
     }
     en.wikipedia.org (parse) CVS Health
     CVS Health (en) data
     {
-      infobox: <dict(28)> name, logo, logo_size, former_name, type, tr...
+      infobox: <dict(30)> name, logo, logo_size, former_name, type, tr...
       pageid: 10377597
-      parsetree: <str(70825)> <root><template><title>short description...
+      parsetree: <str(71146)> <root><template><title>about</title><par...
       requests: <list(1)> parse
       title: CVS Health
       wikibase: Q624375
       wikidata_url: https://www.wikidata.org/wiki/Q624375
-      wikitext: <str(54943)> {{short description|American healthcare c...
+      wikitext: <str(56445)> {{about|the parent company previously nam...
     }
     en.wikipedia.org (parse) Amazon (company)
     en.wikipedia.org (imageinfo) File:Amazon Spheres 05.jpg
     Amazon (company) (en) data
     {
       image: <list(1)> {'kind': 'parse-image', 'file': 'File:Amazon Sp...
-      infobox: <dict(32)> name, logo, logo_size, image, image_caption,...
-      iwlinks: <list(2)> https://commons.wikimedia.org/wiki/Category:A...
+      infobox: <dict(33)> name, logo, logo_size, logo_caption, image, ...
+      iwlinks: <list(3)> https://commons.wikimedia.org/wiki/Category:A...
       pageid: 90451
-      parsetree: <str(183373)> <root><template><title>short descriptio...
+      parsetree: <str(208612)> <root><template><title>pp</title><part>...
       requests: <list(2)> parse, imageinfo
       title: Amazon (company)
       wikibase: Q3884
       wikidata_url: https://www.wikidata.org/wiki/Q3884
-      wikitext: <str(142559)> {{short description|American technology ...
+      wikitext: <str(163616)> {{pp|small=yes}}{{Short description|Amer...
     }
     en.wikipedia.org (parse) AT&T
     en.wikipedia.org (imageinfo) File:AT&THQDallas.jpg
     AT&T (en) data
     {
       image: <list(1)> {'kind': 'parse-image', 'file': 'File:AT&THQDal...
-      infobox: <dict(28)> name, logo, logo_size, image, image_size, im...
+      infobox: <dict(29)> name, logo, logo_caption, logo_size, image, ...
       iwlinks: <list(1)> https://commons.wikimedia.org/wiki/Category:AT%26T
       pageid: 17555269
-      parsetree: <str(136294)> <root><template><title>about</title><pa...
+      parsetree: <str(155118)> <root><template><title>Short descriptio...
       requests: <list(2)> parse, imageinfo
       title: AT&T
       wikibase: Q35476
       wikidata_url: https://www.wikidata.org/wiki/Q35476
-      wikitext: <str(109258)> {{about|the company known as AT&T since ...
+      wikitext: <str(125355)> {{Short description|American multination...
     }
     en.wikipedia.org (parse) General Motors
     en.wikipedia.org (imageinfo) File:RenCen.JPG
     General Motors (en) data
     {
       image: <list(1)> {'kind': 'parse-image', 'file': 'File:RenCen.JP...
-      infobox: <dict(30)> name, former_name, logo, logo_size, image, i...
+      infobox: <dict(31)> name, former_name, logo, logo_size, image, i...
       iwlinks: <list(2)> https://commons.wikimedia.org/wiki/Category:G...
       pageid: 12102
-      parsetree: <str(187427)> <root><template><title>short descriptio...
+      parsetree: <str(245578)> <root><template><title>short descriptio...
       requests: <list(2)> parse, imageinfo
       title: General Motors
       wikibase: Q81965
       wikidata_url: https://www.wikidata.org/wiki/Q81965
-      wikitext: <str(146919)> {{short description|American automotive ...
+      wikitext: <str(198605)> {{short description|American automotive ...
     }
     en.wikipedia.org (parse) Ford Motor Company
     en.wikipedia.org (imageinfo) File:FordGlassHouse.jpg
     Ford Motor Company (en) data
     {
       image: <list(1)> {'kind': 'parse-image', 'file': 'File:FordGlass...
-      infobox: <dict(27)> name, logo, image, image_size, image_caption...
+      infobox: <dict(28)> name, logo, image, image_size, image_caption...
       iwlinks: <list(8)> https://commons.wikimedia.org/wiki/Category:F...
       pageid: 30433662
-      parsetree: <str(197053)> <root><template><title>Redirect</title>...
+      parsetree: <str(233947)> <root><template><title>short descriptio...
       requests: <list(2)> parse, imageinfo
       title: Ford Motor Company
       wikibase: Q44294
       wikidata_url: https://www.wikidata.org/wiki/Q44294
-      wikitext: <str(160388)> {{Redirect|Ford}}{{pp-semi-indef}}{{pp-m...
+      wikitext: <str(196686)> {{short description|American multination...
     }
     en.wikipedia.org (parse) AmerisourceBergen
-    AmerisourceBergen (en) data
-    {
-      infobox: <dict(17)> name, logo, type, traded_as, foundation, loc...
-      pageid: 1445945
-      parsetree: <str(21535)> <root><template><title>short description...
-      requests: <list(1)> parse
-      title: AmerisourceBergen
-      wikibase: Q470156
-      wikidata_url: https://www.wikidata.org/wiki/Q470156
-      wikitext: <str(16172)> {{short description|American healthcare c...
-    }
-    en.wikipedia.org (parse) Chevron Corporation
-    Chevron Corporation (en) data
-    {
-      image: <list(0)> 
-      infobox: <dict(24)> name, logo, logo_size, logo_caption, image, ...
-      iwlinks: <list(2)> https://commons.wikimedia.org/wiki/Category:C...
-      pageid: 284749
-      parsetree: <str(125957)> <root><template><title>short descriptio...
-      requests: <list(1)> parse
-      title: Chevron Corporation
-      wikibase: Q319642
-      wikidata_url: https://www.wikidata.org/wiki/Q319642
-      wikitext: <str(102739)> {{short description|American multination...
-    }
-    en.wikipedia.org (parse) Cardinal Health
-    Cardinal Health (en) data
-    {
-      infobox: <dict(17)> name, logo, type, traded_as, industry, found...
-      pageid: 1041632
-      parsetree: <str(33864)> <root><template><title>Infobox company</...
-      requests: <list(1)> parse
-      title: Cardinal Health
-      wikibase: Q902397
-      wikidata_url: https://www.wikidata.org/wiki/Q902397
-      wikitext: <str(26601)> {{Infobox company| name = Cardinal Health...
-    }
-    en.wikipedia.org (parse) Costco
-    en.wikipedia.org (imageinfo) File:Costcoheadquarters.jpg
-    Costco (en) data
-    {
-      image: <list(1)> {'kind': 'parse-image', 'file': 'File:Costcohea...
-      infobox: <dict(35)> name, logo, logo_caption, image, image_size,...
-      iwlinks: <list(1)> https://commons.wikimedia.org/wiki/Category:Costco
-      pageid: 446056
-      parsetree: <str(101971)> <root><template><title>Distinguish</tit...
-      requests: <list(2)> parse, imageinfo
-      title: Costco
-      wikibase: Q715583
-      wikidata_url: https://www.wikidata.org/wiki/Q715583
-      wikitext: <str(76641)> {{Distinguish|COSCO|Cosco (India) Limited...
-    }
-    en.wikipedia.org (parse) Verizon Communications
-    en.wikipedia.org (imageinfo) File:Verizon Building (8156005279).jpg
-    Verizon Communications (en) data
-    {
-      image: <list(1)> {'kind': 'parse-image', 'file': 'File:Verizon B...
-      infobox: <dict(32)> name, logo, image, image_size, image_caption...
-      iwlinks: <list(3)> https://commons.wikimedia.org/wiki/Category:T...
-      pageid: 18619278
-      parsetree: <str(154091)> <root><template><title>redirect</title>...
-      requests: <list(2)> parse, imageinfo
-      title: Verizon Communications
-      wikibase: Q467752
-      wikidata_url: https://www.wikidata.org/wiki/Q467752
-      wikitext: <str(130536)> {{redirect|Verizon|its mobile network su...
-    }
-    en.wikipedia.org (parse) Kroger
-    en.wikipedia.org (imageinfo) File:Cincinnati-kroger-building.jpg
-    Kroger (en) data
-    {
-      image: <list(1)> {'kind': 'parse-image', 'file': 'File:Cincinnat...
-      infobox: <dict(24)> name, logo, image, image_caption, type, trad...
-      iwlinks: <list(1)> https://commons.wikimedia.org/wiki/Category:Kroger
-      pageid: 367762
-      parsetree: <str(121075)> <root><template><title>short descriptio...
-      requests: <list(2)> parse, imageinfo
-      title: Kroger
-      wikibase: Q153417
-      wikidata_url: https://www.wikidata.org/wiki/Q153417
-      wikitext: <str(101498)> {{short description|American multination...
-    }
-    en.wikipedia.org (parse) General Electric
-    General Electric (en) data
-    {
-      infobox: <dict(20)> name, logo, type, traded_as, ISIN, industry,...
-      iwlinks: <list(1)> https://commons.wikimedia.org/wiki/Category:G...
-      pageid: 12730
-      parsetree: <str(165322)> <root><template><title>redirect</title>...
-      requests: <list(1)> parse
-      title: General Electric
-      wikibase: Q54173
-      wikidata_url: https://www.wikidata.org/wiki/Q54173
-      wikitext: <str(140011)> {{redirect|GE}}{{distinguish|text=the fo...
-    }
-    en.wikipedia.org (parse) Walgreens Boots Alliance
-    Walgreens Boots Alliance (en) data
-    {
-      infobox: <dict(29)> name, logo, logo_size, type, traded_as, pred...
-      pageid: 44732533
-      parsetree: <str(32556)> <root><template><title>Use mdy dates</ti...
-      requests: <list(1)> parse
-      title: Walgreens Boots Alliance
-      wikibase: Q18712620
-      wikidata_url: https://www.wikidata.org/wiki/Q18712620
-      wikitext: <str(25068)> {{Use mdy dates|date=October 2019}}{{shor...
-    }
-    en.wikipedia.org (parse) JPMorgan Chase
-    en.wikipedia.org (imageinfo) File:383 Madison Ave Bear Stearns C ...
-    JPMorgan Chase (en) data
-    {
-      image: <list(1)> {'kind': 'parse-image', 'file': 'File:383 Madis...
-      infobox: <dict(31)> name, logo, image, image_caption, type, trad...
-      iwlinks: <list(2)> https://commons.wikimedia.org/wiki/Category:J...
-      pageid: 231001
-      parsetree: <str(144960)> <root><template><title>About</title><pa...
-      requests: <list(2)> parse, imageinfo
-      title: JPMorgan Chase
-      wikibase: Q192314
-      wikidata_url: https://www.wikidata.org/wiki/Q192314
-      wikitext: <str(117507)> {{About|JPMorgan Chase & Co|its main sub...
-    }
     
+
+
+    ---------------------------------------------------------------------------
+
+    error                                     Traceback (most recent call last)
+
+    <ipython-input-15-f63c42f71bd5> in <module>
+          2     page = wptools.page(company) # create a page object
+          3     try:
+    ----> 4         page.get_parse() # call the API and parse the data
+          5         if page.data['infobox'] != None:
+          6             # if infobox is present
+    
+
+    c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages\wptools\page.py in get_parse(self, show, proxy, timeout)
+        601             raise ValueError("get_parse needs title or pageid")
+        602 
+    --> 603         self._get('parse', show, proxy, timeout)
+        604 
+        605         return self
+    
+
+    c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages\wptools\core.py in _get(self, action, show, proxy, timeout)
+        173         qstr = self._query(action, qobj)
+        174         req = self._request(proxy, timeout)
+    --> 175         response = req.get(qstr, qobj.status)
+        176 
+        177         self.cache[action]['query'] = qstr
+    
+
+    c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages\wptools\request.py in get(self, url, status)
+         74             print("Requests DISABLED", file=sys.stderr)
+         75         else:
+    ---> 76             return self.curl_perform(crl)
+         77 
+         78     def curl_perform(self, crl):
+    
+
+    c:\users\apidwalin\anaconda3\envs\tensorflow1\lib\site-packages\wptools\request.py in curl_perform(self, crl)
+         82         bfr = BytesIO()
+         83         crl.setopt(crl.WRITEFUNCTION, bfr.write)
+    ---> 84         crl.perform()
+         85         info = curl_info(crl)
+         86         if info:
+    
+
+    error: (28, 'Operation timed out after 300279 milliseconds with 0 out of 0 bytes received')
+
 
 Let's take a look at the first instance in `wiki_data` i.e. **Walmart**,
 
@@ -689,24 +703,6 @@ Let's take a look at the first instance in `wiki_data` i.e. **Walmart**,
 ```python
 wiki_data[0]
 ```
-
-
-
-
-    {'founder': '[[Sam Walton]]',
-     'location_country': 'U.S.',
-     'revenue': '{{increase}} {{US$|523.964 billion|link|=|yes}} {{small|([[Fiscal Year|FY]] 2020)}}',
-     'operating_income': '{{decrease}} {{US$|20.568 billion}} {{small|(FY 2020)}}',
-     'net_income': '{{increase}} {{US$|14.881 billion}} {{small|(FY 2020)}}',
-     'assets': '{{increase}} {{US$|236.495 billion}} {{small|(FY 2020)}}',
-     'equity': '{{increase}} {{US$|74.669 billion}} {{small|(FY 2020)}}',
-     'type': '[[Public company|Public]]',
-     'industry': '[[Retail]]',
-     'products': '{{hlist|Electronics|Movies and music|Home and furniture|Home improvement|Clothing|Footwear|Jewelry|Toys|Health and beauty|Pet supplies|Sporting goods and fitness|Auto|Photo finishing|Craft supplies|Party supplies|Grocery}}',
-     'num_employees': '{{plainlist|\n* 2.2|nbsp|million, Worldwide (2018)|ref| name="xbrlus_1" |\n* 1.5|nbsp|million, U.S. (2017)|ref| name="Walmart"|{{cite web |url = http://corporate.walmart.com/our-story/locations/united-states |title = Walmart Locations Around the World – United States |publisher = |url-status=live |archiveurl = https://web.archive.org/web/20150926012456/http://corporate.walmart.com/our-story/locations/united-states |archivedate = September 26, 2015 |df = mdy-all }}|</ref>|\n* 700,000, International}} {{nbsp}} million, Worldwide (2018) * 1.5 {{nbsp}} million, U.S. (2017) * 700,000, International',
-     'company_name': 'Walmart'}
-
-
 
 So, we have successfully retrieved all the infobox data for the companies. Also we can notice that some additional wrangling and cleaning is required which we will perform in the next section. 
 

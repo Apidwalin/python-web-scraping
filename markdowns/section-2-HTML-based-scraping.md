@@ -39,7 +39,7 @@ response.headers
 
 
 
-    {'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding, Accept-Encoding', 'Cache-Control': 'max-age=0, private', 'X-Content-Type-Options': 'nosniff', 'X-Cache': 'HIT from squizedge.net', 'Pragma': 'cache', 'Age': '89', 'Server': 'openresty', 'Via': '1.1 squizedge.net', 'Date': 'Thu, 16 Jul 2020 10:09:08 GMT', 'X-upgrade-enabled': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Expires': 'Thu, 16 Jul 2020 10:39:08 GMT', 'X-Request-ID': '417b2838-f05d-49fe-912f-e2ce77294f3d', 'Content-Encoding': 'gzip'}
+    {'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding, Accept-Encoding', 'Cache-Control': 'max-age=0, private', 'Pragma': 'cache', 'Server': 'openresty', 'X-Content-Type-Options': 'nosniff', 'X-Cache': 'HIT from squizedge.net', 'Date': 'Sat, 17 Jul 2021 03:22:35 GMT', 'Age': '41', 'Via': '1.1 squizedge.net', 'X-upgrade-enabled': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Expires': 'Sat, 17 Jul 2021 03:52:31 GMT', 'X-Request-ID': 'c87280a6-ae71-4360-9275-cfca6ca24f56', 'Content-Encoding': 'gzip'}
 
 
 
@@ -76,7 +76,7 @@ response.content[:2000] # check the end index
 
 
 
-    b'<!DOCTYPE html>\n<html lang="en">\n    <head>\n        <meta charset="utf-8" />\n        <meta name="viewport" content="width=device-width, initial-scale=1.0">\n        <title>Monash University - one of the top universities in Australia</title>\n\n        <link rel="canonical" href="https://www.monash.edu" />\n        \n        \n        \r\n<!-- For iPad with high-resolution Retina display running iOS \xe2\x89\xa5 7: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-152.png">\r\n\r\n<!-- For iPad with high-resolution Retina display running iOS \xe2\x89\xa4 6: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-144.png">\r\n\r\n<!-- For iPhone with high-resolution Retina display running iOS \xe2\x89\xa5 7: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-120.png">\r\n\r\n<!-- For iPhone with high-resolution Retina display running iOS \xe2\x89\xa4 6: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-114.png">\r\n\r\n<!-- For first- and second-generation iPad: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-72.png">\r\n\r\n<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->\r\n<link rel="apple-touch-icon-precomposed" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-57.png">\r\n\r\n<link rel="icon" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon.ico">\r\n<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favico'
+    b'\n\n\n\n<!DOCTYPE html>\n<html lang="en">\n    <head>\n        <meta charset="utf-8" />\n        <meta name="viewport" content="width=device-width, initial-scale=1.0">\n        <title>Monash University - one of the top universities in Australia</title>\n\n        <link rel="canonical" href="https://www.monash.edu" />\n        \n        \n        \r\n<!-- For iPad with high-resolution Retina display running iOS \xe2\x89\xa5 7: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-152.png">\r\n\r\n<!-- For iPad with high-resolution Retina display running iOS \xe2\x89\xa4 6: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-144.png">\r\n\r\n<!-- For iPhone with high-resolution Retina display running iOS \xe2\x89\xa5 7: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-120.png">\r\n\r\n<!-- For iPhone with high-resolution Retina display running iOS \xe2\x89\xa4 6: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-114.png">\r\n\r\n<!-- For first- and second-generation iPad: -->\r\n<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-72.png">\r\n\r\n<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->\r\n<link rel="apple-touch-icon-precomposed" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon-57.png">\r\n\r\n<link rel="icon" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/favicon.ico">\r\n<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="https://www.monash.edu/__data/assets/git_bridge/0006/509343/deploy/mysource_files/fa'
 
 
 
@@ -147,7 +147,7 @@ print('Content of the website\n', response.content[:2000])
     --
     
     Content of the website
-     b'<!DOCTYPE html>\n<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">\n  <head>\n    <meta charset="utf-8" />\n<script>dataLayer = [];dataLayer.push({"tag": "5914"});</script>\n<script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({"drupalLanguage":"en","drupalCountry":"IN","siteName":"Zyxware Technologies","entityCreated":"1562300185","entityLangcode":"en","entityStatus":"1","entityUid":"1","entityUuid":"6fdfb477-ce5d-4081-9010-3afd9260cdf7","entityVid":"15541","entityName":"webmaster","entityType":"node","entityBundle":"story","entityId":"5914","entityTitle":"List of Fortune 500 companies and their websites (2018)","entityTaxonomy":{"vocabulary_2":"Business Insight, Fortune 500, Drupal Insight, Marketing Resources"},"userUid":0});</script>\n<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1488254-2"></script>\n<script>window.google_analytics_uacct = "UA-1488254-2";window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());window[\'GoogleAnalyticsObject\'] = \'ga\';\r\n  window[\'ga\'] = window[\'ga\'] || function() {\r\n    (window[\'ga\'].q = window[\'ga\'].q || []).push(arguments)\r\n  };\r\nga("set", "dimension2", window.analytics_manager_node_age);\r\nga("set", "dimension3", window.analytics_manager_node_author);gtag("config", "UA-1488254-2", {"groups":"default","anonymize_ip":true,"page_path":location.pathname + location.search + location.hash,"link_attribution":true,"allow_ad_personalization_signals":false});</script>\n<script>(function(w,d,t,u,n,a,m){w[\'MauticTrackingObject\']=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),m=d.ge'
+     b'<!DOCTYPE html>\n<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">\n  <head>\n    <meta charset="utf-8" />\n<script>dataLayer = [];dataLayer.push({"tag": "5914"});</script>\n<script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({"drupalLanguage":"en","drupalCountry":"IN","siteName":"Zyxware Technologies","entityCreated":"1562300185","entityLangcode":"en","entityStatus":"1","entityUid":"1","entityUuid":"6fdfb477-ce5d-4081-9010-3afd9260cdf7","entityVid":"15541","entityName":"webmaster","entityType":"node","entityBundle":"story","entityId":"5914","entityTitle":"List of Fortune 500 companies and their websites (2018)","contentType":"articles","SubCategory1":"5914","SubCategory2":"list-of-fortune-500-companies-and-their-websites-2018","entityTaxonomy":{"vocabulary_2":"Business Insight, Fortune 500, Drupal Insight, Marketing Resources"},"userUid":0});</script>\n<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1488254-2"></script>\n<script>window.google_analytics_uacct = "UA-1488254-2";window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());window[\'GoogleAnalyticsObject\'] = \'ga\';\r\n  window[\'ga\'] = window[\'ga\'] || function() {\r\n    (window[\'ga\'].q = window[\'ga\'].q || []).push(arguments)\r\n  };\r\nga("set", "dimension2", window.analytics_manager_node_age);\r\nga("set", "dimension3", window.analytics_manager_node_author);gtag("config", "UA-1488254-2", {"groups":"default","anonymize_ip":true,"page_path":location.pathname + location.search + location.hash,"link_attribution":true,"allow_ad_personalization_signals":false});</script>\n<link rel="canonical" href="h'
     
 
 This text when formatted looks like this,
@@ -249,36 +249,55 @@ all_values[:10] # Prints the first 10 captured tag elements
 
 
 
-    [<tr><th>Rank</th>
+    [<tr>
+     <th>Rank</th>
      <th>Company</th>
      <th>Website</th>
-     </tr>, <tr><td>1</td>
+     </tr>,
+     <tr>
+     <td>1</td>
      <td>Walmart</td>
      <td><a href="http://www.stock.walmart.com">http://www.stock.walmart.com</a></td>
-     </tr>, <tr><td>2</td>
+     </tr>,
+     <tr>
+     <td>2</td>
      <td>Exxon Mobil</td>
      <td><a href="http://www.exxonmobil.com">http://www.exxonmobil.com</a></td>
-     </tr>, <tr><td>3</td>
+     </tr>,
+     <tr>
+     <td>3</td>
      <td>Berkshire Hathaway</td>
      <td><a href="http://www.berkshirehathaway.com">http://www.berkshirehathaway.com</a></td>
-     </tr>, <tr><td>4</td>
+     </tr>,
+     <tr>
+     <td>4</td>
      <td>Apple</td>
-     <td><a href="http://www.apple.com">http://www.apple.com</a></td>
-     </tr>, <tr><td>5</td>
+     <td><a href="https://www.apple.com">http://www.apple.com</a></td>
+     </tr>,
+     <tr>
+     <td>5</td>
      <td>UnitedHealth Group</td>
      <td><a href="http://www.unitedhealthgroup.com">http://www.unitedhealthgroup.com</a></td>
-     </tr>, <tr><td>6</td>
+     </tr>,
+     <tr>
+     <td>6</td>
      <td>McKesson</td>
      <td><a href="http://www.mckesson.com">http://www.mckesson.com</a></td>
-     </tr>, <tr><td>7</td>
+     </tr>,
+     <tr>
+     <td>7</td>
      <td>CVS Health</td>
      <td><a href="http://www.cvshealth.com">http://www.cvshealth.com</a></td>
-     </tr>, <tr><td>8</td>
+     </tr>,
+     <tr>
+     <td>8</td>
      <td>Amazon.com</td>
-     <td><a href="http://www.amazon.com">http://www.amazon.com</a></td>
-     </tr>, <tr><td>9</td>
+     <td><a href="https://www.amazon.com">http://www.amazon.com</a></td>
+     </tr>,
+     <tr>
+     <td>9</td>
      <td>AT&amp;T</td>
-     <td><a href="http://www.att.com">http://www.att.com</a></td>
+     <td><a href="https://www.att.com">http://www.att.com</a></td>
      </tr>]
 
 
@@ -292,17 +311,20 @@ print('--')
 print(all_values[2])
 ```
 
-    <tr><th>Rank</th>
+    <tr>
+    <th>Rank</th>
     <th>Company</th>
     <th>Website</th>
     </tr>
     --
-    <tr><td>1</td>
+    <tr>
+    <td>1</td>
     <td>Walmart</td>
     <td><a href="http://www.stock.walmart.com">http://www.stock.walmart.com</a></td>
     </tr>
     --
-    <tr><td>2</td>
+    <tr>
+    <td>2</td>
     <td>Exxon Mobil</td>
     <td><a href="http://www.exxonmobil.com">http://www.exxonmobil.com</a></td>
     </tr>
@@ -340,6 +362,69 @@ for row in all_values[1:]:
 # Print the first 5 rows of the dataframe
 fortune_500_df.head()
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rank</th>
+      <th>company_name</th>
+      <th>company_website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Walmart</td>
+      <td>http://www.stock.walmart.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Exxon Mobil</td>
+      <td>http://www.exxonmobil.com</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Berkshire Hathaway</td>
+      <td>http://www.berkshirehathaway.com</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Apple</td>
+      <td>http://www.apple.com</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>UnitedHealth Group</td>
+      <td>http://www.unitedhealthgroup.com</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 |    |   rank | company_name       | company_website                  |
 |---:|-------:|:-------------------|:---------------------------------|

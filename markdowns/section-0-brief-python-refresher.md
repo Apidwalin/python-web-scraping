@@ -63,6 +63,48 @@ df = pd.DataFrame(data)
 df
 ```
 
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>sam</td>
+      <td>physicist</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>rob</td>
+      <td>economist</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 |    | name   | title     |
 |---:|:-------|:----------|
 |  0 | sam    | physicist |
@@ -86,6 +128,97 @@ df = pd.DataFrame(data)
 df
 ```
 
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>University</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sam</td>
+      <td>Physicist</td>
+      <td>59</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Rob</td>
+      <td>Economist</td>
+      <td>66</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jack</td>
+      <td>Statistician</td>
+      <td>42</td>
+      <td>Sydney</td>
+      <td>UNSW</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jill</td>
+      <td>Data Scientist</td>
+      <td>28</td>
+      <td>Sydney</td>
+      <td>UTS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dave</td>
+      <td>Designer</td>
+      <td>24</td>
+      <td>Melbourne</td>
+      <td>Uni Mel</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Alex</td>
+      <td>Architect</td>
+      <td>39</td>
+      <td>Perth</td>
+      <td>UWA</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Steve</td>
+      <td>Doctor</td>
+      <td>52</td>
+      <td>Brisbane</td>
+      <td>UQ</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 |    | Name   | Title          |   Age | City      | University   |
 |---:|:-------|:---------------|------:|:----------|:-------------|
 |  0 | Sam    | Physicist      |    59 | Melbourne | Monash       |
@@ -108,6 +241,81 @@ We can also take a quick glance at its contents by using :
 df.head()
 ```
 
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>University</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sam</td>
+      <td>Physicist</td>
+      <td>59</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Rob</td>
+      <td>Economist</td>
+      <td>66</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jack</td>
+      <td>Statistician</td>
+      <td>42</td>
+      <td>Sydney</td>
+      <td>UNSW</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jill</td>
+      <td>Data Scientist</td>
+      <td>28</td>
+      <td>Sydney</td>
+      <td>UTS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dave</td>
+      <td>Designer</td>
+      <td>24</td>
+      <td>Melbourne</td>
+      <td>Uni Mel</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 |    | Name   | Title          |   Age | City      | University   |
 |---:|:-------|:---------------|------:|:----------|:-------------|
 |  0 | Sam    | Physicist      |    59 | Melbourne | Monash       |
@@ -120,6 +328,81 @@ df.head()
 ```python
 df.tail()
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>University</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Jack</td>
+      <td>Statistician</td>
+      <td>42</td>
+      <td>Sydney</td>
+      <td>UNSW</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jill</td>
+      <td>Data Scientist</td>
+      <td>28</td>
+      <td>Sydney</td>
+      <td>UTS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dave</td>
+      <td>Designer</td>
+      <td>24</td>
+      <td>Melbourne</td>
+      <td>Uni Mel</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Alex</td>
+      <td>Architect</td>
+      <td>39</td>
+      <td>Perth</td>
+      <td>UWA</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Steve</td>
+      <td>Doctor</td>
+      <td>52</td>
+      <td>Brisbane</td>
+      <td>UQ</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 |    | Name   | Title          |   Age | City      | University   |
 |---:|:-------|:---------------|------:|:----------|:-------------|
@@ -136,6 +419,57 @@ Lets say we want to fiter out all the people from `Sydney`.
 df[df['City'] == 'Sydney']
 ```
 
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>University</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Jack</td>
+      <td>Statistician</td>
+      <td>42</td>
+      <td>Sydney</td>
+      <td>UNSW</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jill</td>
+      <td>Data Scientist</td>
+      <td>28</td>
+      <td>Sydney</td>
+      <td>UTS</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 |    | Name   | Title          |   Age | City   | University   |
 |---:|:-------|:---------------|------:|:-------|:-------------|
 |  2 | Jack   | Statistician   |    42 | Sydney | UNSW         |
@@ -148,6 +482,57 @@ Now, lets say we want to look at all the people in `Melbourne` and in `Monash`. 
 ```python
 df[(df['City'] == 'Melbourne') & (df['University'] == 'Monash')]
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>University</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sam</td>
+      <td>Physicist</td>
+      <td>59</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Rob</td>
+      <td>Economist</td>
+      <td>66</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 |    | Name   | Title     |   Age | City      | University   |
 |---:|:-------|:----------|------:|:----------|:-------------|
@@ -168,6 +553,57 @@ We can also fetch specific rows based on their indexes as well.
 ```python
 df.iloc[1:3]
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>University</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Rob</td>
+      <td>Economist</td>
+      <td>66</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jack</td>
+      <td>Statistician</td>
+      <td>42</td>
+      <td>Sydney</td>
+      <td>UNSW</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 |    | Name   | Title        |   Age | City      | University   |
 |---:|:-------|:-------------|------:|:----------|:-------------|
@@ -194,6 +630,97 @@ Lets look at the updated data frame.
 ```python
 df
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>University</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sam</td>
+      <td>Physicist</td>
+      <td>59</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Rob</td>
+      <td>Economist</td>
+      <td>66</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jack</td>
+      <td>Statistician</td>
+      <td>43</td>
+      <td>Sydney</td>
+      <td>UNSW</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jill</td>
+      <td>Data Scientist</td>
+      <td>28</td>
+      <td>Sydney</td>
+      <td>UTS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dave</td>
+      <td>Designer</td>
+      <td>24</td>
+      <td>Melbourne</td>
+      <td>Uni Mel</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Alex</td>
+      <td>Architect</td>
+      <td>39</td>
+      <td>Perth</td>
+      <td>UWA</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Steve</td>
+      <td>Doctor</td>
+      <td>52</td>
+      <td>Brisbane</td>
+      <td>UQ</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 |    | Name   | Title          |   Age | City      | University   |
 |---:|:-------|:---------------|------:|:----------|:-------------|
@@ -229,6 +756,97 @@ We can read back the file that we just created.
 df_res = pd.read_csv('researchers.csv', sep=',')
 df_res
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>University</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sam</td>
+      <td>Physicist</td>
+      <td>59</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Rob</td>
+      <td>Economist</td>
+      <td>66</td>
+      <td>Melbourne</td>
+      <td>Monash</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jack</td>
+      <td>Statistician</td>
+      <td>43</td>
+      <td>Sydney</td>
+      <td>UNSW</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jill</td>
+      <td>Data Scientist</td>
+      <td>28</td>
+      <td>Sydney</td>
+      <td>UTS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dave</td>
+      <td>Designer</td>
+      <td>24</td>
+      <td>Melbourne</td>
+      <td>Uni Mel</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Alex</td>
+      <td>Architect</td>
+      <td>39</td>
+      <td>Perth</td>
+      <td>UWA</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Steve</td>
+      <td>Doctor</td>
+      <td>52</td>
+      <td>Brisbane</td>
+      <td>UQ</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 |    | Name   | Title          |   Age | City      | University   |
 |---:|:-------|:---------------|------:|:----------|:-------------|
@@ -283,11 +901,7 @@ Lets take a look at `y` as follows,
 print(y)
 ```
 
-    {
-        "name": "John",
-        "age": 30,
-        "city": "New York"
-    }
+    {'name': 'John', 'age': 30, 'city': 'New York'}
     
 
 We can obtain the exact same JSON string we defined earlier from a Python dictionary as follows,
